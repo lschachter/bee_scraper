@@ -13,13 +13,15 @@ def scrape_answers(req_lib, scraper):
     # Isolate the data we need, kept in the first js script on the page
     scrape = scrape.script.string
 
-    answer_key = '"answers":'
+    answer_key = '"answers":['
     answers_index = scrape.index(answer_key) + len(answer_key)
     scrape = scrape[answers_index:]
     list_end = scrape.index(']')
-    scrape = scrape[:(list_end - 1)]
+    scrape = scrape[:list_end]
 
+    scrape = scrape.replace('"', '')
     words = scrape.split(',')
+
     return len(words)
 
 
