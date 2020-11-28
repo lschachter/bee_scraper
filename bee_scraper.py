@@ -14,8 +14,7 @@ def scrape_answers(req_lib, scraper):
     scrape = scrape.script.string
 
     answer_key = '"answers":'
-    answers_index = scrape.index('"answers":')
-    answers_index += len(answer_key)
+    answers_index = scrape.index(answer_key) + len(answer_key)
     scrape = scrape[answers_index:]
     list_end = scrape.index(']')
     scrape = scrape[:(list_end - 1)]
