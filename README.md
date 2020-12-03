@@ -4,9 +4,18 @@ This quick scraper uses Python's [requests](https://requests.readthedocs.io/en/m
 
 To use, make sure that both of the needed libraries are installed. You can follow along in their documentation linked above, but at the time of this writing the steps are simply
 
-```python3
+```
 pip3 install requests
 pip3 install beautifulsoup4
 ```
 
-in your terminal. Enjoy!
+in your terminal. Then to run it, either use the file-path or `cd` into the folder, and call it with Python (both examples below).
+
+```
+python3 Documents/bee_scraper/bee_scraper.py
+
+cd Documents/bee_scraper
+python3 bee_scraper.py
+```
+
+Enjoy!
